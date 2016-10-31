@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<script>
+
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'Messenger'));
+
+  window.extAsyncInit = function() {
+   
+  };
+
+  function nameSelected(name) {
+    MessengerExtensions.getUserID(function success(uids) {
+      var psid = uids.psid;
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", "https://1abf02d5.ngrok.io/select-return?psid="+psid+"&name="+name, true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send();
+      MessengerExtensions.requestCloseBrowser(function success() {
+        console.log('+++ success +++');
+      }, function error(err) {
+        console.log('+++ error +++', err);
+      }); 
+    }, function error(err) {      
+      console.log('error:', err);
+    }); 
+  }
+</script>      
+
+
+<html>
+  <head>
+    <title>{{pagename}}</title>
+  </head>
+  <body>
+    <h1> {{title}} </h1>
+    <div>
+      {% for name in names %}
+         <button class="btn btn-primary btn-lg" onclick="nameSelected('{{name}}')">{{ name }}</button>
+      {% endfor %} 
+    </div>
+    <div></div>
+  </body>
+</html>

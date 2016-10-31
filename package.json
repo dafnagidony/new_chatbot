@@ -1,0 +1,36 @@
+{
+  "name": "dashbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
+    "javascript-state-machine": "^2.3.5",
+    "lodash.merge": "^4.6.0",
+    "moment": "^2.14.1",
+    "nohm": "^0.9.8",
+    "obil-server": "^0.4.1",
+    "obil-utils": "^0.5.0",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "phantom": "^2.1.21",
+    "pluralize": "^3.0.0",
+    "quiche": "0.0.10",
+    "request": "^2.74.0",
+    "request-promise": "^4.1.1",
+    "swig": "^1.4.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}
