@@ -36,7 +36,8 @@ config.common = {
       host: '127.0.0.1',
       port: 6379,
       type: 'redis',
-      db: 1
+      db: 1,
+      logErrors: true
     },
     user: {
       host: '127.0.0.1',

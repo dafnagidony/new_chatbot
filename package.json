@@ -25,6 +25,7 @@
     "phantom": "^2.1.21",
     "pluralize": "^3.0.0",
     "quiche": "0.0.10",
+    "randomstring": "^1.1.5",
     "request": "^2.74.0",
     "request-promise": "^4.1.1",
     "swig": "^1.4.2",
